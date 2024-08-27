@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('choco_install.bat', '.'), ('codeblocks_install.bat', '.'), ('java_install.bat', '.'), ('jetbrain_install.bat', '.'), ('mingw_install.bat', '.'), ('netbeans_install.bat', '.'), ('python_install.bat', '.'), ('vsc_install.bat', '.')],
+    datas=[('choco_install.bat', '.'), ('codeblocks_install.bat', '.'), ('java_install.bat', '.'), ('jetbrain_install.bat', '.'), ('mingw_install.bat', '.'), ('netbeans_install.bat', '.'), ('python_install.bat', '.'), ('vsc_install.bat', '.'), ('Iverilog.bat', '.'), ('Gtkwave.bat', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

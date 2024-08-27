@@ -33,6 +33,14 @@ def Install_Java(root):
     go_go(root, "java_install.bat")
     # print("JAVA")
 
+def Install_Iverilog(root):
+    go_go(root, "Iverilog.bat")
+    # print("Iverilog")
+
+def Install_Gtkwave(root):
+    go_go(root, "Gtkwave.bat")
+    # print("GTKWAVE")
+
 
 def Install_vsc(root):
     go_go(root, "vsc_install.bat")

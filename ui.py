@@ -5,7 +5,7 @@ from my_functions import *
 # main window
 root = tk.Tk()
 root.geometry('500x500')
-root.minsize(400, 700)
+root.minsize(400, 850)
 # root.resizable(False, False)
 root.config(background='#F4EEFF')
 root.title('ByteWizard')
@@ -76,6 +76,8 @@ buttons = [
     tk.Button(root, text="C/C++", **btn_style, command=lambda: Install_C(root)),
     tk.Button(root, text="Python", **btn_style, command=lambda: Install_Python(root)),
     tk.Button(root, text="Java", **btn_style, command=lambda: Install_Java(root)),
+    tk.Button(root, text="Iverilog", **btn_style, command=lambda: Install_Iverilog(root)),
+    tk.Button(root, text="GtkWave", **btn_style, command=lambda: Install_Gtkwave(root)),
 ]
 
 for btn in buttons:

@@ -31,7 +31,8 @@ def show_loading_screen(root):
 def run_batch_file(batch_file_path, root, loading_window):
     try:
         res = subprocess.run([batch_file_path], capture_output=True, text=True, check=True)
-        output = "green checkmark✅"
+        # output = "green checkmark✅"
+        output = f"Execution successful:\n{res.stdout}\n\nGreen checkmark ✅"
     except subprocess.CalledProcessError as e:
         output = f"Error: {e.output}"
     except FileNotFoundError:
