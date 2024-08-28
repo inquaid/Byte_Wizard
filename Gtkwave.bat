@@ -28,4 +28,4 @@ if '%errorlevel%' EQU '0' (
 )
 
 REM Pause to keep the window open (optional)
-@REM pause
+REM pause

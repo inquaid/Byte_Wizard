@@ -31,15 +31,15 @@ def show_loading_screen(root):
 def run_batch_file(batch_file_path, root, loading_window):
     try:
         res = subprocess.run([batch_file_path], capture_output=True, text=True, check=True)
-        # output = "green checkmark✅"
-        output = f"Execution successful:\n{res.stdout}\n\nGreen checkmark ✅"
+        output = "green checkmark✅"
+        # output = f"Execution successful:\n{res.stdout}\n\nGreen checkmark ✅"
     except subprocess.CalledProcessError as e:
         output = f"Error: {e.output}"
     except FileNotFoundError:
         output = f"The batch file '{batch_file_path}' was not found."
     finally:
         loading_window.destroy()
-        show_output_messagebox(root, output)
+        # show_output_messagebox(root, output)
 
 
 def go_go(root, file_path):
@@ -52,7 +52,6 @@ import tkinter as tk
 from tkinter import messagebox
 
 file_path = "ptc.bat"
-
 
 # def open(root):
 #     btn = tk.Button(root, text="Click", command=lambda: go_go(root, file_path))

@@ -76,8 +76,7 @@ buttons = [
     tk.Button(root, text="C/C++", **btn_style, command=lambda: Install_C(root)),
     tk.Button(root, text="Python", **btn_style, command=lambda: Install_Python(root)),
     tk.Button(root, text="Java", **btn_style, command=lambda: Install_Java(root)),
-    tk.Button(root, text="Iverilog", **btn_style, command=lambda: Install_Iverilog(root)),
-    tk.Button(root, text="GtkWave", **btn_style, command=lambda: Install_Gtkwave(root)),
+
 ]
 
 for btn in buttons:
@@ -111,5 +110,28 @@ for btn in buttons:
     btn.bind("<Enter>", on_enter)
     btn.bind("<Leave>", on_leave)
 
-root.mainloop()
+# SIMULATOR label
+Simulator = tk.Label(
+    root,
+    text="  SIMULATOR",
+    fg='#424874',
+    bg='#A6B1E1',
+    height=1,
+    width=30,
+    font=('inter', 15, "bold"),
+    anchor="w",
+)
+Simulator.pack(pady=5, fill="x")
 
+# VSC, netbeans, intelijee, code blocks
+buttons = [
+    tk.Button(root, text="Iverilog", **btn_style, command=lambda: Install_Iverilog(root)),
+    tk.Button(root, text="GtkWave", **btn_style, command=lambda: Install_Gtkwave(root)),
+]
+
+for btn in buttons:
+    btn.pack(pady=10)
+    btn.bind("<Enter>", on_enter)
+    btn.bind("<Leave>", on_leave)
+
+root.mainloop()
