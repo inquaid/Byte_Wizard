@@ -11,11 +11,9 @@ root.title('ByteWizard')
 # icon = PhotoImage(file='wizard1.png')
 # root.iconphoto(True, icon)
 
-# Create a frame to hold the canvas and scrollbars
 frame = tk.Frame(root)
 frame.pack(fill=tk.BOTH, expand=True)
 
-# Create a canvas widget
 canvas = tk.Canvas(frame, bg='#F4EEFF')
 canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
@@ -27,11 +25,9 @@ v_scroll.pack(side=tk.RIGHT, fill=tk.Y)
 # h_scroll = tk.Scrollbar(frame, orient=tk.HORIZONTAL, command=canvas.xview)
 # h_scroll.pack(side=tk.BOTTOM, fill=tk.X)
 
-# Configure the canvas scrollbars
 canvas.configure(yscrollcommand=v_scroll.set)
 # canvas.configure(xscrollcommand=h_scroll.set)  # Uncomment if using horizontal scrollbar
 
-# Create a frame inside the canvas to hold other widgets
 inner_frame = tk.Frame(canvas, bg='#F4EEFF')
 inner_frame_id = canvas.create_window((0, 0), window=inner_frame, anchor="nw")
 
