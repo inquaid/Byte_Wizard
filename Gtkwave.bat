@@ -12,6 +12,7 @@ REM Check if GTKWave is already installed
 where gtkwave >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo GTKWave is already installed.
+
 ) else (
     REM Install GTKWave using Chocolatey
     echo Installing GTKWave...
