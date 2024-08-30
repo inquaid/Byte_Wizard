@@ -12,6 +12,7 @@ REM Check if Chocolatey is already installed
 where choco >nul 2>&1
 if %ERRORLEVEL% EQU 0 (
     echo Chocolatey is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Chocolatey is already installed', 'Alert', 'OK', 'Information')"
     exit /b 0
 )
 
@@ -23,5 +24,5 @@ powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((
 
 REM Verify installation
 choco --version
-
+powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Choco installation is successful', 'Alert', 'OK', 'Information')"
 @REM pause

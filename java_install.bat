@@ -12,6 +12,8 @@ REM Check if Java is already installed
 where java >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo Java is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('JAVA is already installed', 'Alert', 'OK', 'Information')"
+
 ) else (
     REM Install Java using Chocolatey
     echo Installing Java...
@@ -22,8 +24,12 @@ if '%errorlevel%' EQU '0' (
     where java >nul 2>&1
     if '%errorlevel%' EQU '0' (
         echo Java was successfully installed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('JAVA installation is successful', 'Alert', 'OK', 'Information')"
+
     ) else (
         echo Java installation failed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install JAVA', 'Alert', 'OK', 'Information')"
+
     )
 )
 

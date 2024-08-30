@@ -46,9 +46,9 @@ def on_resize(event):
 
 def on_mouse_wheel(event):
     # Adjust scrolling sensitivity
-    sensitivity = 1  # Adjust this value for smoother or faster scrolling
+    sensitivity = 1 # Adjust this value for smoother or faster scrolling
     if event.delta:  # For Windows and Linux
-        canvas.yview_scroll(int(-1 * (event.delta / 120) * sensitivity), "units")
+        canvas.yview_scroll(int(-1 * (event.delta / 40) * sensitivity), "units")
     else:  # For macOS
         canvas.yview_scroll(int(-1 * (event.num - 4) * sensitivity), "units")
 
