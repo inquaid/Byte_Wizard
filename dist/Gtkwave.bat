@@ -12,6 +12,7 @@ REM Check if GTKWave is already installed
 where gtkwave >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo GTKWave is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('GTKWAVE is already installed', 'Alert', 'OK', 'Information')"
 ) else (
     REM Install GTKWave using Chocolatey
     echo Installing GTKWave...
@@ -22,10 +23,12 @@ if '%errorlevel%' EQU '0' (
     where gtkwave >nul 2>&1
     if '%errorlevel%' EQU '0' (
         echo GTKWave was successfully installed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('GTKWAVE installation is successful', 'Alert', 'OK', 'Information')"
     ) else (
         echo GTKWave installation failed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install GTKWAVE', 'Alert', 'OK', 'Information')"
     )
 )
 
 REM Pause to keep the window open (optional)
-@REM pause
+REM pause

@@ -12,6 +12,8 @@ REM Check if Python is already installed
 where python >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo Python is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Python is already installed', 'Alert', 'OK', 'Information')"
+
 ) else (
     REM Install Python using Chocolatey
     echo Installing Python...
@@ -22,8 +24,11 @@ if '%errorlevel%' EQU '0' (
     where python >nul 2>&1
     if '%errorlevel%' EQU '0' (
         echo Python was successfully installed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Python installation is successful', 'Alert', 'OK', 'Information')"
     ) else (
         echo Python installation failed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install Python', 'Alert', 'OK', 'Information')"
+
     )
 )
 

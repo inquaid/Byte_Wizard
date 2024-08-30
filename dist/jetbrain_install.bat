@@ -12,6 +12,8 @@ REM Check if JetBrains Toolbox is already installed
 where toolbox >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo JetBrains Toolbox is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('JetBrain is already installed', 'Alert', 'OK', 'Information')"
+
 ) else (
     REM Install JetBrains Toolbox using Chocolatey
     echo Installing JetBrains Toolbox...
@@ -22,8 +24,12 @@ if '%errorlevel%' EQU '0' (
     where toolbox >nul 2>&1
     if '%errorlevel%' EQU '0' (
         echo JetBrains Toolbox was successfully installed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('JetBrain installation is successful', 'Alert', 'OK', 'Information')"
+
     ) else (
         echo JetBrains Toolbox installation failed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install JetBrain', 'Alert', 'OK', 'Information')"
+
     )
 )
 

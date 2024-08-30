@@ -12,6 +12,8 @@ REM Check if MinGW (gcc) is already installed
 where gcc >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo MinGW is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('MINGW is already installed', 'Alert', 'OK', 'Information')"
+
 ) else (
     REM Install MinGW using Chocolatey
     echo Installing MinGW...
@@ -22,8 +24,12 @@ if '%errorlevel%' EQU '0' (
     where gcc >nul 2>&1
     if '%errorlevel%' EQU '0' (
         echo MinGW was successfully installed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('MINGW installation is successful', 'Alert', 'OK', 'Information')"
+
     ) else (
         echo MinGW installation failed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install MINGW', 'Alert', 'OK', 'Information')"
+
     )
 )
 

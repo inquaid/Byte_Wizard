@@ -12,6 +12,8 @@ REM Check if Code::Blocks is already installed
 where codeblocks >nul 2>&1
 if '%errorlevel%' EQU '0' (
     echo Code::Blocks is already installed.
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('CodeBlocks is already installed', 'Alert', 'OK', 'Information')"
+
 ) else (
     REM Install Code::Blocks using Chocolatey
     echo Installing Code::Blocks...
@@ -22,8 +24,11 @@ if '%errorlevel%' EQU '0' (
     where codeblocks >nul 2>&1
     if '%errorlevel%' EQU '0' (
         echo Code::Blocks was successfully installed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('CodeBlocks installation is successful', 'Alert', 'OK', 'Information')"
     ) else (
         echo Code::Blocks installation failed.
+        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('CodeBlocks installation is successful', 'Alert', 'OK', 'Information')"
+
     )
 )
 
