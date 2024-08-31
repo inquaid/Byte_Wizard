@@ -26,7 +26,7 @@ if '%errorlevel%' EQU '0' (
         powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('GTKWAVE installation is successful', 'Alert', 'OK', 'Information')"
     ) else (
         echo GTKWave installation failed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install GTKWAVE', 'Alert', 'OK', 'Information')"
+rem        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install GTKWAVE', 'Alert', 'OK', 'Information')"
     )
 )
 

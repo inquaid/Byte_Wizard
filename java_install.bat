@@ -28,7 +28,7 @@ if '%errorlevel%' EQU '0' (
 
     ) else (
         echo Java installation failed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install JAVA', 'Alert', 'OK', 'Information')"
+rem        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install JAVA', 'Alert', 'OK', 'Information')"
 
     )
 )
