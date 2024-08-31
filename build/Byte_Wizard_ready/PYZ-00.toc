@@ -1,4 +1,4 @@
-('D:\\programs\\Byte_Wizard\\Byte_Wizard\\build\\Byte_Wizard_ready\\PYZ-00.pyz',
+('D:\\programs\\Byte_Wizard\\Byte_Wizard\\build\\Byte_Wizard_Ready\\PYZ-00.pyz',
  [('_compat_pickle',
    'C:\\Users\\azmain inquaid haque\\.conda\\envs\\env\\Lib\\_compat_pickle.py',
    'PYMODULE'),
