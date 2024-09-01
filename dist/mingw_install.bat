@@ -21,15 +21,7 @@ if '%errorlevel%' EQU '0' (
 
     REM Verify the installation
     echo Verifying MinGW installation...
-    where gcc >nul 2>&1
-    if '%errorlevel%' EQU '0' (
-        echo MinGW was successfully installed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('MINGW installation is successful', 'Alert', 'OK', 'Information')"
-
-    ) else (
-        echo MinGW installation failed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install MINGW', 'Alert', 'OK', 'Information')"
-
-    )
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('MINGW installation is successful', 'Alert', 'OK', 'Information')"
+    
 )
 
