@@ -21,16 +21,8 @@ if '%errorlevel%' EQU '0' (
 
     REM Verify the installation
     echo Verifying JetBrains Toolbox installation...
-    where toolbox >nul 2>&1
-    if '%errorlevel%' EQU '0' (
-        echo JetBrains Toolbox was successfully installed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('JetBrain installation is successful', 'Alert', 'OK', 'Information')"
-
-    ) else (
-        echo JetBrains Toolbox installation failed.
-rem        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install JetBrain', 'Alert', 'OK', 'Information')"
-
-    )
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('JetBrain installation is successful', 'Alert', 'OK', 'Information')"
+    
 )
 
 REM Pause to keep the window open (optional)

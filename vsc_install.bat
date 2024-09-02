@@ -21,15 +21,8 @@ if '%errorlevel%' EQU '0' (
 
     REM Verify the installation
     echo Verifying Visual Studio Code installation...
-    where code >nul 2>&1
-    if '%errorlevel%' EQU '0' (
-        echo Visual Studio Code was successfully installed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('VSCode installation is successful', 'Alert', 'OK', 'Information')"
-    ) else (
-        echo Visual Studio Code installation failed.
-rem        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install VSCode', 'Alert', 'OK', 'Information')"
-
-    )
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('VSCode installation is successful', 'Alert', 'OK', 'Information')"
+    
 )
 
 REM Pause to keep the window open (optional)

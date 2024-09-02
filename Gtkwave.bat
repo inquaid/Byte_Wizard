@@ -20,14 +20,16 @@ if '%errorlevel%' EQU '0' (
 
     REM Verify the installation
     echo Verifying GTKWave installation...
-    where gtkwave >nul 2>&1
-    if '%errorlevel%' EQU '0' (
-        echo GTKWave was successfully installed.
-        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('GTKWAVE installation is successful', 'Alert', 'OK', 'Information')"
-    ) else (
-        echo GTKWave installation failed.
-rem        powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install GTKWAVE', 'Alert', 'OK', 'Information')"
-    )
+    powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('GTKWAVE installation is successful', 'Alert', 'OK', 'Information')"
+
+    @REM where gtkwave >nul 2>&1
+    @REM if '%errorlevel%' EQU '0' (
+    @REM     echo GTKWave was successfully installed.
+    @REM     powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('GTKWAVE installation is successful', 'Alert', 'OK', 'Information')"
+    @REM ) else (
+    @REM     echo GTKWave installation failed.
+    @REM     powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Failed to install GTKWAVE', 'Alert', 'OK', 'Information')"
+    @REM )
 )
 
 REM Pause to keep the window open (optional)

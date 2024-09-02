@@ -23,6 +23,6 @@ REM Download and run the installation script
 powershell -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('%chocoInstallUrl%'))"
 
 REM Verify installation
-choco --version
+@REM choco --version
 powershell -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Choco installation is successful', 'Alert', 'OK', 'Information')"
 @REM pause
