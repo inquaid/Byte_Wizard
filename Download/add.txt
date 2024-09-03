@@ -1,0 +1,1 @@
+".v": "cd $dir && iverilog -o $fileNameWithoutExt.vvp $fileName && vvp $fileNameWithoutExt.vvp && gtkwave $fileNameWithoutExt.vcd",
