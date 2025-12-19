@@ -1,0 +1,3 @@
+# Byte Wizard Dependencies
+tkinter  # Usually included with Python installation
+pillow>=9.0.0  # For handling images (icon) 

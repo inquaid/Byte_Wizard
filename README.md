@@ -1,82 +1,113 @@
-# Byte_Wizard
+# Byte Wizard
 
-Byte_Wizard is an automated installer designed to simplify the process of setting up essential software and tools on your Windows machine. The project is powered by Python and utilizes batch scripts to manage the installation process.
+![Byte Wizard Logo](assets/wizard_icon.png)
 
-## Software Included in the Installation
-
-- Chocolatey (Package Manager)
-- MinGW (Minimalist Development Environment for Native Windows Applications)
-- Python (Programming Language)
-- Java Development Kit (JDK)
-- Visual Studio Code (Source Code Editor)
-- NetBeans (Java IDE)
-- JetBrains Toolbox (IDE Management for IntelliJ IDEA, PyCharm, etc.)
-- Code::Blocks (IDE for C, C++, and Fortran)
+Byte Wizard is a sleek, user-friendly software installation assistant designed to streamline the setup of essential development tools on your Windows system. With a modern interface and one-click installation process, Byte Wizard simplifies the often complex process of configuring a development environment.
 
 ## Features
 
-- **Automated Installation:** Easily install a suite of essential software with minimal user interaction.
-- **Chocolatey Integration:** Uses Chocolatey, a popular Windows package manager, to handle software installations.
-- **User-Friendly Interface:** A simple UI allows users to select options and execute tasks without the need for command-line operations.
-- **Customizable:** Modify the included Python scripts and batch files to add or remove software as needed.
+- **Modern, Intuitive UI**: Clean and polished interface that's easy to navigate
+- **One-Click Installation**: Install complex development tools with a single click
+- **Visual Feedback**: Clear installation progress indicators
+- **Categorized Software**: Tools organized by category for easy discovery
+- **Tooltips**: Helpful descriptions of each software package
+- **Cross-Platform Compatible**: Works on Windows systems with plans for Linux/macOS support
+
+## Software Available for Installation
+
+### Essential Tools
+- **Chocolatey**: Package manager for Windows that simplifies software installation
+
+### Programming Languages
+- **C/C++ (MinGW)**: Minimalist GNU for Windows compiler and toolset
+- **Python**: Versatile programming language popular for web, data science, and general applications
+- **Java**: Cross-platform language and runtime environment
+
+### Development Environments
+- **VS Code**: Lightweight yet powerful code editor with extensive plugin support
+- **NetBeans**: Full-featured IDE primarily for Java development
+- **JetBrains Tools**: Suite of professional IDEs for various languages
+- **Code::Blocks**: Free, open-source IDE for C/C++ development
+
+### Simulation Tools
+- **Iverilog**: Verilog HDL compiler and simulation tool
+- **GtkWave**: Waveform viewer for digital simulation results
 
 ## Project Structure
 
-- **Python Files**: Handle the backend logic and UI for the application.
-  - `main.py`: Initializes the program.
-  - `UI.py`: Manages the main interface where users interact with the application.
-  - `my_functions.py`: Contains all the functions for the program, including calls to the installation batch files.
-  - `second_window.py`: Manages the installation window. This part of the program may require further modifications.
+The project follows a clear, modular organization:
 
-- **Batch Files**: Execute specific installation commands.
-  - `choco_install.bat`: Installs Chocolatey, the package manager used for subsequent software installations.
-  - `mingw_install.bat`: Installs MinGW, a minimalist development environment for native Windows applications.
-  - `python_install.bat`: Installs Python, a versatile programming language.
-  - `java_install.bat`: Installs the Java Development Kit (JDK) required for Java development.
-  - `vsc_install.bat`: Installs Visual Studio Code, a lightweight but powerful source code editor.
-  - `netbeans_install.bat`: Installs NetBeans, an IDE primarily for Java development.
-  - `jetbrain_install.bat`: Installs JetBrains Toolbox, which allows you to manage JetBrains IDEs like IntelliJ IDEA, PyCharm, etc.
-  - `codeblocks_install.bat`: Installs Code::Blocks, an IDE for C, C++, and Fortran.
+```
+Byte_Wizard/
+├── assets/                 # Images and static resources
+├── src/                    # Source code
+│   ├── core/               # Core functionality
+│   │   └── functions.py    # Helper functions and installation logic
+│   ├── scripts/            # Installation scripts
+│   │   └── installers/     # Batch files for software installation
+│   ├── ui/                 # User interface components
+│   │   └── main_window.py  # Main application window
+│   └── main.py             # Application entry point
+└── README.md               # Documentation
+```
 
 ## Getting Started
 
 ### Prerequisites
 
-Before running Byte_Wizard, ensure that your system meets the following requirements:
-
 - Windows 7 or later
+- Administrator privileges (required for software installation)
+- Internet connection
 
-### Installation Steps
+### Installation
 
-1. **Download the Byte_Wizard Package**
-   - Navigate to the [Download](https://github.com/inquaid/Byte_Wizard/tree/main/Download) section of this repository and download the latest version of `Byte_Wizard.zip`.
+1. **Download the latest release**
+   - Download the latest release from the [Releases](https://github.com/yourusername/Byte_Wizard/releases) page
 
-2. **Extract the ZIP File**
-   - Unzip the downloaded file to a directory of your choice.
+2. **Run the application**
+   - Extract the ZIP file to a directory of your choice
+   - Run `Byte_Wizard.exe` to start the application
 
-3. **Run the Application**
-   - Navigate to the extracted directory and double-click on `byte_wizard_no_console.exe` to launch the program.
+3. **Install software**
+   - Click on the software you want to install
+   - Follow any on-screen prompts if required
 
-4. **Install Chocolatey**
-   - In the program interface, first click on the "Install Chocolatey" button.
-   - Once the installation process begins, follow the on-screen prompts, if any, and press any key to continue when prompted.
+## Development
 
-5. **Install Software**
-   - After installing Chocolatey, choose the software you wish to install by clicking on the respective options within the UI.
-   - The installation will proceed automatically, with progress displayed in the program window.
+### Setting Up the Development Environment
 
-6. **Enjoy!**
-   - Once all installations are complete, your system will be ready with the selected software installed.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/Byte_Wizard.git
+   cd Byte_Wizard
+   ```
 
-## Customization
+2. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-If you'd like to customize the software installation process, you can edit the Python and batch files to suit your needs. Each file is well-commented to guide you through making changes.
+3. Run the application in development mode:
+   ```
+   python src/main.py
+   ```
 
 ## Contributing
 
-If you find any issues or have suggestions for improving Byte_Wizard, feel free to open an issue or submit a pull request. Contributions are always welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
-- [Chocolatey](https://chocolatey.org/) for providing a robust package management solution for Windows.
-- [Python](https://www.python.org/) for making automation simple and powerful.
+- Icons and visual elements inspired by [Feather Icons](https://feathericons.com/)
+- Color palette based on [Coolors](https://coolors.co/)
+- Special thanks to all contributors and early testers
